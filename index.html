@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nishtha</title>
+  <!-- We'll use Google Fonts for a premium look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- The cursor elements -->
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-ring" class="cursor-ring"></div>
+
+  <nav class="navbar">
+    <div class="logo magnetic">Nishtha</div>
+    <div class="nav-links">
+      <a href="#" class="nav-link magnetic">Home</a>
+      <a href="#" class="nav-link magnetic">Showcase</a>
+      <a href="#" class="nav-link magnetic">About</a>
+    </div>
+    <button class="nav-btn magnetic">Contact</button>
+  </nav>
+
+  <main class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Nishtha🌷</h1>
+      <p class="hero-subtitle">The love of my life, everything feels better with you, ILYSM❤️</p>
+      <div class="cta-group">
+        <button class="btn btn-primary magnetic">Explore Project</button>
+        <button class="btn btn-secondary magnetic">View Source</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Background decorative blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html># Source - https://stackoverflow.com/a/3673674
+# Posted by Greg
+# Retrieved 2026-03-04, License - CC BY-SA 2.5
+
+#!/bin/bash                                                                                                    
+input=""
+while [ "$input" != "exit" ]
+do
+    echo -n "cliApp($mode) > " && read input
+    if [ "$input" = "config" ]
+    then
+        mode="config"
+    elif [ "$input" = "up" ]
+    then
+        mode=""
+    elif [ "$input" = "exit" ]
+    then
+    break
+    else
+        if [ "$mode" = "config" ]
+        then
+            if [ "$input" = "list" ]
+            then
+                echo "ABCD"
+            else
+                echo "Invalid"
+            fi
+        else
+            echo "Invalid"
+        fi
+    fi
+done
+
+exit
